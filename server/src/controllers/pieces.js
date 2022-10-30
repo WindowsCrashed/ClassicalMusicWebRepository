@@ -1,11 +1,15 @@
 import model from '../models/piece.js'
 
 export const getPieces = async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    
     const pieces = await model.find()
-    res.send(pieces) 
+    res.send(pieces.sort()) 
 } 
 
 export const getPieceById = async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    
     const { id } = req.params
 
     try {
@@ -20,6 +24,8 @@ export const getPieceById = async (req, res) => {
 }
 
 export const createPiece = async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+
     const piece = req.body
 
     try {
@@ -31,6 +37,8 @@ export const createPiece = async (req, res) => {
 }
 
 export const updatePiece = async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    
     const { id } = req.params
 
     try {
@@ -54,6 +62,8 @@ export const updatePiece = async (req, res) => {
 }
 
 export const deletePiece = async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    
     const { id } = req.params
     
     try {
