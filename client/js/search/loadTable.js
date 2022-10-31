@@ -1,8 +1,14 @@
-async function loadIntoTable(url, table){
+export default async function loadTable(url, table){
     const tableHead = table.querySelector("thead")
     const tableBody = table.querySelector("tbody")
+    
+    tableHead.innerHTML = "<tr></tr>"
+    tableBody.innerHTML = ""
+    
     const response = await fetch(url)
     const data = await response.json()
+
+    if (data.length == 0) return
 
     const headers = Object.keys(data[0]).filter(k => k != "_id" && k != "__v")
     const rows = []
@@ -12,9 +18,6 @@ async function loadIntoTable(url, table){
         rows.push(Object.values({ composer, name, catalog, key }))
     }
 
-    tableHead.innerHTML = "<tr></tr>"
-    tableBody.innerHTML = ""
-    
     for (const headerText of headers) {
         const headerElement = document.createElement("th")
 
@@ -35,5 +38,3 @@ async function loadIntoTable(url, table){
         tableBody.appendChild(rowElement)
     }
 }
-
-loadIntoTable('http://localhost:4404/pieces', document.querySelector("table"))

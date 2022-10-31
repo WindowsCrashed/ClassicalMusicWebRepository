@@ -1,0 +1,16 @@
+import loadIntoTable from "./loadTable.js"
+import { parseDataToQuery } from "./parsers.js"
+import { getSearchData } from "./getFormData.js"
+
+function listPieces(target) {
+    const data = getSearchData(target)
+    const url = `http://localhost:4404/pieces/search?${parseDataToQuery(data)}`
+    loadIntoTable(url, document.querySelector("table"))
+}
+
+document.getElementById("searchInput").addEventListener("submit", (event) => {
+    event.preventDefault()
+    listPieces(event.target)
+})
+
+loadIntoTable('http://localhost:4404/pieces/search', document.querySelector("table"))
