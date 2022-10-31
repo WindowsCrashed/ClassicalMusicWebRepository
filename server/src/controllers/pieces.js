@@ -23,6 +23,27 @@ export const getPieceById = async (req, res) => {
     }
 }
 
+export const getPiecesByFilter = async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*') 
+
+    const { composer, name, catalog, key }  = req.query    
+
+    try {
+        const pieces = await model.find({
+            composer: new RegExp(composer, "i"),
+            name: new RegExp(name, "i"),
+            catalog: new RegExp(catalog, "i"),
+            key: new RegExp(key, "i")
+        })
+
+        if (!pieces) return res.status(204).json()   
+
+        res.send(pieces)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 export const createPiece = async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
 

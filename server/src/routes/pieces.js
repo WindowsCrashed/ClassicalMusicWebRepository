@@ -1,11 +1,13 @@
 import express from 'express'
-import { createPiece, getPieces, getPieceById, updatePiece, deletePiece } from '../controllers/pieces.js'
+import { createPiece, getPieces, getPieceById, getPiecesByFilter, updatePiece, deletePiece, } from '../controllers/pieces.js'
 
 const router = express.Router()
 
 router.get('/', getPieces)
 
-router.get('/:id', getPieceById)
+router.get('/piece/:id', getPieceById)
+
+router.get('/search', getPiecesByFilter)
 
 router.post('/', createPiece)
 
