@@ -1,9 +1,9 @@
 import loadIntoTable from "./loadTable.js"
 import { parseDataToQuery } from "./parsers.js"
-import { getSearchData } from "./getFormData.js"
+import { getFormData } from "../Utils/getFormData.js"
 
 function listPieces(target) {
-    const data = getSearchData(target)
+    const data = getFormData(target)
     const url = `http://localhost:4404/pieces/search?${parseDataToQuery(data)}`
     loadIntoTable(url, document.querySelector("table"))
 }

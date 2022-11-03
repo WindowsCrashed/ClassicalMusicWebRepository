@@ -36,7 +36,7 @@ export const getPiecesByFilter = async (req, res) => {
             key: new RegExp(key, "i")
         })
 
-        if (!pieces) return res.status(204).json()   
+        if (pieces.length === 0) return res.status(204).json()   
 
         res.send(pieces)
     } catch (error) {
@@ -45,10 +45,8 @@ export const getPiecesByFilter = async (req, res) => {
 }
 
 export const createPiece = async (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*')
-
     const piece = req.body
-
+    
     try {
         await model.create(piece)
         res.send(piece)
