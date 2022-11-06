@@ -1,15 +1,11 @@
 import model from '../models/piece.js'
 
 export const getPieces = async (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    
     const pieces = await model.find()
     res.send(pieces.sort()) 
 } 
 
 export const getPieceById = async (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    
     const { id } = req.params
 
     try {
@@ -24,8 +20,6 @@ export const getPieceById = async (req, res) => {
 }
 
 export const getPiecesByFilter = async (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*') 
-
     const { composer, name, catalog, key }  = req.query    
 
     try {
@@ -48,6 +42,8 @@ export const createPiece = async (req, res) => {
     const piece = req.body
     
     try {
+        if (await model.findOne(piece) != null) return res.send(404).json() // Find approppriate error later
+        
         await model.create(piece)
         res.send(piece)
     } catch (error) {
@@ -56,8 +52,6 @@ export const createPiece = async (req, res) => {
 }
 
 export const updatePiece = async (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    
     const { id } = req.params
 
     try {
@@ -80,9 +74,7 @@ export const updatePiece = async (req, res) => {
     }
 }
 
-export const deletePiece = async (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    
+export const deletePiece = async (req, res) => {    
     const { id } = req.params
     
     try {

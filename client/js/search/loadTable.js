@@ -5,10 +5,9 @@ export default async function loadTable(url, table){
     tableHead.innerHTML = "<tr></tr>"
     tableBody.innerHTML = ""
     
-    const response = await fetch(url)
-    const data = await response.json()
+    const data = await fetch(url).then(res => res.json()).catch(() => { return undefined })
 
-    if (data.length == 0) return
+    if (data == undefined) return
 
     const headers = Object.keys(data[0]).filter(k => k != "_id" && k != "__v")
     const rows = []

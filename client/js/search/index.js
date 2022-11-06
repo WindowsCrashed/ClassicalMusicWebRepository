@@ -4,7 +4,7 @@ import { getFormData } from "../Utils/getFormData.js"
 
 function listPieces(target) {
     const data = getFormData(target)
-    const url = `http://localhost:4404/pieces/search?${parseDataToQuery(data)}`
+    const url = `http://localhost:8010/proxy/pieces/search?${parseDataToQuery(data)}`
     loadIntoTable(url, document.querySelector("table"))
 }
 
@@ -13,4 +13,4 @@ document.getElementById("searchInput").addEventListener("submit", (event) => {
     listPieces(event.target)
 })
 
-loadIntoTable('http://localhost:4404/pieces/search', document.querySelector("table"))
+loadIntoTable('http://localhost:8010/proxy/pieces/search', document.querySelector("table"))
