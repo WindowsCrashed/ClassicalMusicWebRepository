@@ -42,7 +42,7 @@ export const createPiece = async (req, res) => {
     const piece = req.body
     
     try {
-        if (await model.findOne(piece) != null) return res.send(404).json() // Find approppriate error later
+        if (await model.findOne(piece) != null) return res.send(422).json()
         
         await model.create(piece)
         res.send(piece)

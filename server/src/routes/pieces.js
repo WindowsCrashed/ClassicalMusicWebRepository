@@ -15,4 +15,4 @@ router.patch('/:id', updatePiece)
 
 router.delete('/:id', deletePiece)
 
-export default router;
+export default router

@@ -12,8 +12,8 @@ export default async function loadTable(url, table){
     const headers = Object.keys(data[0]).filter(k => k != "_id" && k != "__v")
     const rows = []
 
-    for (let i = 0; i < data.length; i++) {
-        const { composer, name, catalog, key } = data[i]
+    for (const piece of data) {
+        const { composer, name, catalog, key } = piece
         rows.push(Object.values({ composer, name, catalog, key }))
     }
 
