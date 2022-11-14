@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMR Edit</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Menu</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="add.html">Add</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Edit a piece in our repository</h1>
+
+        <div>
+            <form id="editInput" action="search.html" style="width: 200px;">
+                <div>
+                    <label>Composer</label>
+                    <input name="composer" type="text">
+                    <label>Name</label>
+                    <input name="name" type="text">
+                    <label>Catalog</label>
+                    <input name="catalog" type="text">
+                    <label>Key</label>
+                    <input name="key" type="text">
+                    <input type="submit" value="Save changes">
+                    <input type="submit" value="Delete piece" delete>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../js/edit/index.js" type="module"></script>
+</body>
+</html>

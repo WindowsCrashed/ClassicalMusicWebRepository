@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMR Delete</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Menu</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="add.html">Add</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Are you sure you want to delete the following piece?</h1>
+
+        <div>
+            <form id="deleteInput" action="search.html" style="width: 200px;">
+                <div>
+                    <div>
+                        <label>Composer: </label>
+                        <span name="composer"></span>
+                    </div>
+                    <div>
+                        <label>Name: </label>
+                        <span name="name"></span>
+                    </div>
+                    <div>
+                        <label>Catalog: </label>
+                        <span name="catalog"></span>
+                    </div>
+                    <div>
+                        <label>Key: </label>
+                        <span name="key"></span>
+                    </div>
+                    <div>
+                        <input type="submit" value="Delete">
+                        <input type="submit" value="Cancel" cancel>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../js/delete/index.js" type="module"></script>
+</body>
+</html>

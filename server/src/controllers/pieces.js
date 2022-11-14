@@ -2,18 +2,37 @@ import model from '../models/piece.js'
 
 export const getPieces = async (req, res) => {
     const pieces = await model.find()
-    res.send(pieces) 
+    res.send(pieces.sort()) 
 } 
 
 export const getPieceById = async (req, res) => {
-    const { id } = req.params
+    const { id } = req.query
 
     try {
         const piece = await model.findById(id)
 
-        if (!piece) return res.status(204).json()   
-
+        if (!piece) return res.status(204).json()
+        
         res.send(piece)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const getPiecesByFilter = async (req, res) => {
+    const { composer, name, catalog, key }  = req.query    
+
+    try {
+        const pieces = await model.find({
+            composer: new RegExp(composer, "i"),
+            name: new RegExp(name, "i"),
+            catalog: new RegExp(catalog, "i"),
+            key: new RegExp(key, "i")
+        }).sort('composer')
+
+        if (pieces.length === 0) return res.status(204).json()   
+
+        res.send(pieces)
     } catch (error) {
         console.log(error)
     }
@@ -21,8 +40,10 @@ export const getPieceById = async (req, res) => {
 
 export const createPiece = async (req, res) => {
     const piece = req.body
-
+    
     try {
+        if (await model.findOne(piece) != null) return res.send(422).json()
+        
         await model.create(piece)
         res.send(piece)
     } catch (error) {
@@ -53,7 +74,7 @@ export const updatePiece = async (req, res) => {
     }
 }
 
-export const deletePiece = async (req, res) => {
+export const deletePiece = async (req, res) => {    
     const { id } = req.params
     
     try {

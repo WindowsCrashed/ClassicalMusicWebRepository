@@ -5,7 +5,7 @@ const pieceSchema = mongoose.Schema({
     name: String,
     catalog: String,
     key: String
-})
+}, { versionKey: false })
 
 const Piece = mongoose.model('Piece', pieceSchema, 'pieces')
 
