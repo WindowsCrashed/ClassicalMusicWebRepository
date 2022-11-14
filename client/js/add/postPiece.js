@@ -9,5 +9,4 @@ export default async function postPiece(data) {
          },
         body: piece
      })
-    console.log(piece)
 }

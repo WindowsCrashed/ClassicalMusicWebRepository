@@ -6,13 +6,13 @@ export const getPieces = async (req, res) => {
 } 
 
 export const getPieceById = async (req, res) => {
-    const { id } = req.params
+    const { id } = req.query
 
     try {
         const piece = await model.findById(id)
 
-        if (!piece) return res.status(204).json()   
-
+        if (!piece) return res.status(204).json()
+        
         res.send(piece)
     } catch (error) {
         console.log(error)

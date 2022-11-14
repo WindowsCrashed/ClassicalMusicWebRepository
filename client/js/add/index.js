@@ -7,6 +7,5 @@ function addPiece(target) {
 }
 
 document.getElementById("addInput").addEventListener("submit", (event) => {
-    event.preventDefault()
     addPiece(event.target)
 })

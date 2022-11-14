@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.get('/', getPieces)
 
-router.get('/piece/:id', getPieceById)
+router.get('/piece', getPieceById)
 
 router.get('/search', getPiecesByFilter)
 
