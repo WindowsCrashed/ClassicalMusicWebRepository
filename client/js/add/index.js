@@ -1,4 +1,4 @@
-import { getFormData } from "../Utils/getFormData.js"
+import { getFormData } from "../utils/getFormData.js"
 import postPiece from "./postPiece.js"
 
 function addPiece(target) {

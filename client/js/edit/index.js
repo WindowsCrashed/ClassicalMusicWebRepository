@@ -1,5 +1,6 @@
-import { getFormData } from "../Utils/getFormData.js"
+import { getFormData } from "../utils/getFormData.js"
 import updatePiece from "./updatePiece.js"
+import { capitalizeEntry } from '../utils/capitalizeData.js'
 
 function editPiece(target, id) {
     const data = getFormData(target)
@@ -10,6 +11,7 @@ const pieceId = new URLSearchParams(window.location.search).get('id')
 
 fetch(`http://localhost:8010/proxy/pieces/piece?id=${pieceId}`)
     .then(piece => piece.json())
+    .then(capitalizeEntry)
     .then(piece => {
         document.querySelector('[name="composer"]').value = piece.composer
         document.querySelector('[name="name"]').value = piece.name
@@ -18,6 +20,11 @@ fetch(`http://localhost:8010/proxy/pieces/piece?id=${pieceId}`)
     })
     .catch(console.log)
 
-document.getElementById("editInput").addEventListener("submit", (event) => {
+document.getElementById("editInput").addEventListener("submit", event => {
     editPiece(event.target, pieceId)
+})
+
+document.querySelector('[delete]').addEventListener('click', event => {
+    event.preventDefault()
+    window.location.href = `delete.html?id=${pieceId}`
 })

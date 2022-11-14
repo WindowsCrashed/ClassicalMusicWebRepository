@@ -1,6 +1,6 @@
 import loadIntoTable from "./loadTable.js"
 import { parseDataToQuery } from "./parsers.js"
-import { getFormData } from "../Utils/getFormData.js"
+import { getFormData } from "../utils/getFormData.js"
 
 function listPieces(target) {
     const data = getFormData(target)

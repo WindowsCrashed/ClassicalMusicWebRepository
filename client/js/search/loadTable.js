@@ -1,3 +1,5 @@
+import { capitalizeData } from '../utils/capitalizeData.js'
+
 export default async function loadTable(url, table){
     const tableHead = table.querySelector("thead")
     const tableBody = table.querySelector("tbody")
@@ -5,7 +7,7 @@ export default async function loadTable(url, table){
     tableHead.innerHTML = "<tr></tr>"
     tableBody.innerHTML = ""
     
-    const data = await fetch(url).then(res => res.json()).catch(() => { return undefined })
+    const data = await fetch(url).then(res => res.json()).then(capitalizeData).catch(() => { return undefined }) 
 
     if (data == undefined) return
 
