@@ -1,0 +1,40 @@
+* {
+    font-family: Poppins;
+    color: rgb(17, 17, 17);
+}
+
+.header {
+    background-color: rgb(255, 255, 255);
+    color: rgb(17, 17, 17);
+    box-shadow: 0 2px 3px 0 rgb(220, 220, 220);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.brand {
+    font-size: 1.6em;
+}
+
+.navigation {
+    flex-grow: 10;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+}
+
+.navigation li {
+    margin: 0 12px;
+}
+
+.navigation a:hover {
+    color: rgb(220, 220, 220);
+}
