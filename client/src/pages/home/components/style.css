@@ -1,0 +1,55 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 91.8vh;
+}
+
+.content h1 {
+    font-size: 5em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.content h2 {
+    font-size: 2em;
+    font-weight: 100;
+    margin: 0;
+}
+
+.content div {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.content .title-container {
+    flex-direction: column-reverse;
+    justify-self: center;
+    flex-grow: 2;
+}
+
+.content .sub-title-container {
+    flex-direction: column;
+    justify-self: center;
+    flex-grow: 1;
+}
+
+.content .btn-container {
+    flex-direction: column;
+    justify-self: center;
+    flex-grow: 5;
+}
+
+.btn {
+    background-color: rgb(17, 17, 17);
+    color: rgb(255, 255, 255);
+    font-size: 1.6em;
+    text-decoration: none;
+    padding: 25px;
+    border-radius: 50px;
+}
+
+.btn:hover {
+    background-color: rgb(82, 87, 90);
+}
