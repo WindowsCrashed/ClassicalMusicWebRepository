@@ -9,7 +9,7 @@ class Navbar extends Component {
             <React.Fragment>
                 <header className='header'>
                     <div className='brand'>
-                        <Link to='/home'>Classical Music Repository</Link>                     
+                        <Link to='/'>Classical Music Repository</Link>                     
                     </div>
                     <nav className='navigation'>
                         <ul>

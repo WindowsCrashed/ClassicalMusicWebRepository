@@ -5,7 +5,7 @@ import '../style.css'
 function Home() {
     return (
         <React.Fragment>
-            <main className='content'>
+            <main className='content content-home'>
                 <div className='title-container'>
                     <h1>Classical Music Repository</h1>
                 </div>
@@ -13,7 +13,7 @@ function Home() {
                     <h2>The place to find music that never gets old</h2>
                 </div>
                 <div className='btn-container'>
-                    <Link className='btn' to='/search'>Browse repository</Link>
+                    <Link className='btn btn-hover' to='/search'>Browse repository</Link>
                 </div>              
             </main>
         </React.Fragment>
