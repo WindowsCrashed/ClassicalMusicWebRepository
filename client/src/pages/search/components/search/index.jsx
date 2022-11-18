@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import '../style.css'
+import TableBody from '../table-body'
 
 class Search extends Component {
-    state = {  } 
+    state = { }
+
     render() { 
         return (
             <React.Fragment>
@@ -39,41 +41,10 @@ class Search extends Component {
                                     <th>Key</th>
                                 </tr> 
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Bach</td>
-                                    <td>Violin Partita No. 2</td>
-                                    <td>BWV 1004</td>
-                                    <td>D minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Beethoven</td>
-                                    <td>Sonata No. 23 &#40;Appassionata&#41;</td>
-                                    <td>Op. 57</td>
-                                    <td>F minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Chopin</td>
-                                    <td>Piano Concerto No. 1</td>
-                                    <td>Op. 11</td>
-                                    <td>E minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr>
-                                {/* <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr> */}
-                            </tbody>
+                            <TableBody/>
                         </table>
                     </div>   
-                </main>  
+                </main>
             </React.Fragment>
         )
     }

@@ -47,3 +47,15 @@
     max-width: 1000px;
     padding: 10px;
 }
+
+.capital {
+    text-transform: capitalize;
+}
+
+.capital-first::first-letter {
+    text-transform: capitalize;
+}
+
+.upper {
+    text-transform: uppercase;
+}
