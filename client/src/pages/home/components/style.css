@@ -1,3 +1,8 @@
+.content-home {
+    grid-template-columns: 100%;
+    grid-template-rows: 29% 15% 1fr;
+}
+
 .content-home h1 {
     font-size: 5em;
     font-weight: 500;
@@ -13,21 +18,19 @@
 .content-home div {
     display: flex;
     box-sizing: border-box;
+    align-items: center;
 }
 
 .content-home .title-container {
     flex-direction: column-reverse;
-    flex-grow: 2;
 }
 
 .content-home .sub-title-container {
     flex-direction: column;
-    flex-grow: 1;
 }
 
 .content-home .btn-container {
     flex-direction: column;
-    flex-grow: 5;
 }
 
 .btn {

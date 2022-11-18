@@ -10,7 +10,7 @@ class Search extends Component {
                     <div className='title-container'>
                         <h1>Search for a piece in our repository</h1>
                     </div>
-                    <div>
+                    <div className='form-container'>
                         <form id="searchInput" action="">  
                             <div className='input-group'>
                                 <div className='search-container'>
@@ -70,73 +70,6 @@ class Search extends Component {
                                     <td>Op. 19</td>
                                     <td>G sharp minor</td>
                                 </tr> */}
-                                {/* <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr>
-                                <tr>
-                                    <td>Scriabin</td>
-                                    <td>Sonata No. 2 &#40;Sonate-Fantaisie&#41;</td>
-                                    <td>Op. 19</td>
-                                    <td>G sharp minor</td>
-                                </tr> */}
-                                
                             </tbody>
                         </table>
                     </div>   
