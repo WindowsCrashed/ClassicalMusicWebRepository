@@ -30,7 +30,7 @@ export const getPiecesByFilter = async (req, res) => {
             key: new RegExp(key, "i")
         }).sort('composer')
 
-        if (pieces.length === 0) return res.status(204).json()   
+        // if (pieces.length === 0) return res.status(204).json()   
 
         res.send(pieces)
     } catch (error) {

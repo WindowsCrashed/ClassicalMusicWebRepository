@@ -9,8 +9,11 @@ function TableBody() {
     useEffect(() => {
         fetch(`http://localhost:8010/proxy/pieces/search${query}`)
         .then(res => res.json())
-        .then(data => setData(data))
-        .catch(() => { return undefined })
+        .then(data => { 
+            console.log(data)
+            return setData(data)
+        })
+        .catch(console.log)
     }, [query])  
     
     return (
